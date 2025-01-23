@@ -18,10 +18,17 @@ func AddContato(Agenda map[string]string, nome string, tel string) {
 
 }
 
+func BuscaContato(Agenda map[string]string, nome string) string {
+	if Agenda[nome] != "" {
+		return Agenda[nome]
+	}
+	return "Contato não localizado!"
+}
+
 func main() {
 
 	Agenda := map[string]string{}
 	AddContato(Agenda, "Alefe", "115564-0889")
-	fmt.Println(Agenda["Alefe"])
+	fmt.Println(BuscaContato(Agenda, "Alefe"))
 
 }
