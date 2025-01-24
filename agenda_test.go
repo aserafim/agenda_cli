@@ -27,6 +27,6 @@ func TestBuscaContato(t *testing.T) {
 
 	AddContato(Agenda, nome, tel)
 
-	assert.Equal(t, tel, BuscaContato(Agenda, "João"))
+	assert.Equal(t, tel, BuscarContato(Agenda, "João"))
 
 }
